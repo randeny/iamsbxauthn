@@ -1,0 +1,15 @@
+{
+"iamsbxauthn": {
+  "tenantId": "iamsbxauthn"
+}, 
+"dev": {
+  "tenantId": "put_tenantId_here"
+},
+"spt": {
+  "tenantId": "put_tenantId_here"
+},
+"prod": {
+  "tenantId": "put_tenantId_here"
+}
+}
+

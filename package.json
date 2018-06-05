@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/costco-Iam-Dev/iamsbxauthn/issues"
   },
-  "homepage": "https://github.com/costco-Iam-Dev/iamsbxauthn#readme"
+  "homepage": "https://github.com/costco-Iam-Dev/iamsbxauthn#readme",
+  "dependencies": {
+    "handlebars": "^4.0.11"
+  }
 }
