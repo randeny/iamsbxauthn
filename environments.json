@@ -1,6 +1,7 @@
 {
 "iamsbxauthn": {
   "tenantId": "iamsbxauthn"
+  "clientId": "8ab0b18f-fcc0-41f2-899c-6f97c34121b9"
 }, 
 "dev": {
   "tenantId": "put_tenantId_here"
