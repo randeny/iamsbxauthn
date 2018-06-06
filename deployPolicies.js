@@ -3,11 +3,16 @@
 const path = require('path');
 const formData = require('form-data');
 const fetch = require('node-fetch');
+const fs = require('fs');
 
 const source = process.env.target || '.';
 const targetEnvironment = process.env.targetEnvironment || 'iamsbxauthn';
 
 let tokenFile = 'environments.json';
+
+const getFileContent = ((path) => {
+    return fs.readFileSync(path, 'utf8');
+});
 
 tokenFile = getFileContent(path.join(source, tokenFile));
 const tokens = JSON.parse(tokenFile);
@@ -15,18 +20,17 @@ const tokens = JSON.parse(tokenFile);
 const _internals = {
     tenant: `${tokens[targetEnvironment].tenantId}.onmicrosoft.com`,
     clientId: tokens[targetEnvironment].tenantId,
-    clientSecret: process.env.clientSecret,
+    clientSecret: process.env.B2C_CLIENT_SECRET || null,
     credentials: {
-        username: 'testAdmin',
-        password: process.env.password
+        username: tokens[targetEnvironment].credentials.username,
+        password: process.env.B2C_CREDENTIALS_PASSWORD || null
     },
-    scope: 'Directory.AccessAsUser.All openid email profile',
+    scope: tokens[targetEnvironment].scope,
     localPolicies: new Map(),
     localPoliciesSource: source, //local directory where you would find B2C policies.
     targetUrl: 'https://graph.microsoft.com/testcpimtf/trustFrameworkpolicies',  //Graph API Version number needs to be provided.
     access_token: ''  //By default this doesn't exist.  We will fetch a Bearer token.
 };
-
 
 const getBearerToken = async (tenant, username, password, clientId, clientSecret, scope) => {
     const form = new formData();
@@ -55,9 +59,6 @@ const getLocalPolicies = ((path) => {
     });
 });
 
-const getFileContent = ((path) => {
-    return fs.readFileSync(path, 'utf8');
-});
 
 const postPolicy = async (access_token, targetUrl, policy) => {
     const res = await fetch(targetUrl, {
@@ -84,8 +85,9 @@ getBearerToken(_internals.tenant, _internals.credentials.username, _internals.cr
   _internals.access_token = access_token;
   _internals.localPolicies.forEach(policy => {  
     postPolicy(_internals.access_token, `${_internals.targetUrl}`, policy);
-  }
+  });
 }).catch(err => { console.log(err)});
+
 
 
 //Utility code below.  Basically to handle any possible shutdown situation.

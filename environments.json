@@ -1,16 +1,43 @@
 {
 "iamsbxauthn": {
-  "tenantId": "iamsbxauthn"
-  "clientId": "8ab0b18f-fcc0-41f2-899c-6f97c34121b9"
+  "tenantId": "iamsbxauthn",
+  "clientId": "8ab0b18f-fcc0-41f2-899c-6f97c34121b9",
+  "clientSecret": "provided by VSTS",
+  "credentials": {
+        "username": "testAdmin",
+        "password": "provided by VSTS"
+  },
+  "scope": "Directory.AccessAsUser.All openid email profile"
 }, 
 "dev": {
-  "tenantId": "put_tenantId_here"
+  "tenantId": "",
+  "clientId": "",
+  "clientSecret": "provided by VSTS",
+  "credentials": {
+        "username": "testAdmin",
+        "password": "provided by VSTS"
+  },
+  "scope": "Directory.AccessAsUser.All openid email profile"
 },
 "spt": {
-  "tenantId": "put_tenantId_here"
+  "tenantId": "",
+  "clientId": "",
+  "clientSecret": "provided by VSTS",
+  "credentials": {
+        "username": "testAdmin",
+        "password": "provided by VSTS"
+  },
+  "scope": "Directory.AccessAsUser.All openid email profile"
 },
 "prod": {
-  "tenantId": "put_tenantId_here"
+  "tenantId": "",
+  "clientId": "",
+  "clientSecret": "provided by VSTS",
+  "credentials": {
+        "username": "testAdmin",
+        "password": "provided by VSTS"
+  },
+  "scope": "Directory.AccessAsUser.All openid email profile"
 }
 }
 
