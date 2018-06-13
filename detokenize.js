@@ -5,7 +5,7 @@ const path = require('path');
 const handlebars = require('handlebars');
 
 //source directory and targetEnvironment should be defined as a VSTS environment variable.
-const source = process.env.target || '.'; //path to where the files are located.
+const source = process.env.target || '.' ; //Path to where the files are located.
 const targetEnvironment = process.env.targetEnvironment || 'iamsbxauthn';
 const buildId = process.env.buildId || '000'; //VSTS build id
 
