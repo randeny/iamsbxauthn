@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TrustFrameworkPolicy 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" 
+  PolicySchemaVersion="0.3.0.0" 
+  TenantId="iamsbxauthn.onmicrosoft.com" 
+  PolicyId="B2C_1A_TrustFrameworkExtensions1" 
+  PublicPolicyUri="http://iamsbxauthn.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions1">
+  
+  <BasePolicy>
+    <TenantId>iamsbxauthn.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_TrustFrameworkBase1</PolicyId>
+  </BasePolicy>
+  <BuildingBlocks>
+
+  </BuildingBlocks>
+
+  <ClaimsProviders>
+
+
+    <ClaimsProvider>
+      <DisplayName>Local Account SignIn</DisplayName>
+      <TechnicalProfiles>
+         <TechnicalProfile Id="login-NonInteractive">
+          <Metadata>
+            <Item Key="client_id">6329711e-ca69-4aa2-a9b0-9a4be68cd83c</Item>
+            <Item Key="IdTokenAudience">8994070b-4a39-4e38-a3e0-4e9571432a8c</Item>
+          </Metadata>
+          <InputClaims>
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="6329711e-ca69-4aa2-a9b0-9a4be68cd83c" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="8994070b-4a39-4e38-a3e0-4e9571432a8c" />
+          </InputClaims>
+        </TechnicalProfile>
+      </TechnicalProfiles>
+    </ClaimsProvider>
+
+  </ClaimsProviders>
+
+    <!--UserJourneys>
+	
+	</UserJourneys-->
+
+</TrustFrameworkPolicy>
