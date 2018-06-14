@@ -4,9 +4,11 @@ This project is a starting point for integrations with Azure Active Directory (A
 
 The folder structure:
 
+```
 [project-root]
 -- policy (dir containing policy set)
 -- resource (dir containing UX elements)
 -- README.md (this file)
 -- package.json (platform and application configuration/dependencies)
 -- package-lock.json (platform and application dependencies)
+```
