@@ -4,9 +4,9 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="yourtenant.onmicrosoft.com"
+  TenantId="{{TENANT_ID}}"
   PolicyId="B2C_1A_ProfileEdit_{{RELEASE_ID}}"
-  PublicPolicyUri="http://yourtenant.onmicrosoft.com/B2C_1A_ProfileEdit_{{RELEASE_ID}}">
+  PublicPolicyUri="http://{{TENANT_ID}}/B2C_1A_ProfileEdit_{{RELEASE_ID}}">
 
   <BasePolicy>
     <TenantId>yourtenant.onmicrosoft.com</TenantId>
