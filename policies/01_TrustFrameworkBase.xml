@@ -4,9 +4,9 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="iamsbxauthn.onmicrosoft.com"
-  PolicyId="B2C_1A_TrustFrameworkBase"
-  PublicPolicyUri="http://iamsbxauthn.onmicrosoft.com/B2C_1A_TrustFrameworkBase">
+  TenantId="{{TENANT_ID}}"
+  PolicyId="B2C_1A_TrustFrameworkBase_{{RELEASE_ID}}"
+  PublicPolicyUri="http://{{TENANT_ID}}/B2C_1A_TrustFrameworkBase_{{RELEASE_ID}}">
 
   <BuildingBlocks>
     <ClaimsSchema>
@@ -342,7 +342,8 @@
       </ContentDefinition>
 
       <ContentDefinition Id="api.signuporsignin">
-        <LoadUri>~/tenant/default/unified.cshtml</LoadUri>
+        <!--LoadUri>~/tenant/default/unified.cshtml</LoadUri-->
+        <LoadUri>https://{{STORAGE_ACCT_ID}}.blob.core.windows.net/{{CONTAINER_NAME}}/{{RELEASE_ID}}/resources/signup.html</LoadUri>
         <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
         <DataUri>urn:com:microsoft:aad:b2c:elements:unifiedssp:1.0.0</DataUri>
         <Metadata>
@@ -654,7 +655,7 @@
           <DisplayName>Validate user's input data and return loyaltyNumber claim</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
-            <Item Key="ServiceUrl">https://costsbxauesvcbe.azurewebsites.net/api/MemberValidation</Item>
+            <Item Key="ServiceUrl">{{VALIDATE_MEM_SVC_URL}}</Item>
             <Item Key="AuthenticationType">None</Item>
             <Item Key="SendClaimsIn">Body</Item>
           </Metadata>

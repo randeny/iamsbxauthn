@@ -4,32 +4,26 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="iamsbxauthn.onmicrosoft.com"
-  PolicyId="B2C_1A_signup_signin1"
-  PublicPolicyUri="http://iamsbxauthn.onmicrosoft.com/B2C_1A_signup_signin1">
+  TenantId="{{TENANT_ID}}"
+  PolicyId="B2C_1A_ProfileEdit_{{RELEASE_ID}}"
+  PublicPolicyUri="http://{{TENANT_ID}}/B2C_1A_ProfileEdit_{{RELEASE_ID}}">
 
   <BasePolicy>
-    <TenantId>iamsbxauthn.onmicrosoft.com</TenantId>
-    <PolicyId>B2C_1A_TrustFrameworkExtensions1</PolicyId>
+    <TenantId>{{TENANT_ID}}</TenantId>
+    <PolicyId>B2C_1A_TrustFrameworkExtensions_{{RELEASE_ID}}</PolicyId>
   </BasePolicy>
 
   <RelyingParty>
-    <DefaultUserJourney ReferenceId="SignUpOrSignIn" />
+    <DefaultUserJourney ReferenceId="ProfileEdit" />
     <TechnicalProfile Id="PolicyProfile">
       <DisplayName>PolicyProfile</DisplayName>
       <Protocol Name="OpenIdConnect" />
       <OutputClaims>
-        <OutputClaim ClaimTypeReferenceId="displayName" />
-        <OutputClaim ClaimTypeReferenceId="givenName" />
-        <OutputClaim ClaimTypeReferenceId="surname" />
-        <OutputClaim ClaimTypeReferenceId="email" />
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub"/>
-
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
     </TechnicalProfile>
   </RelyingParty>
 </TrustFrameworkPolicy>
-
 
 

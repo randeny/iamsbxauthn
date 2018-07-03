@@ -4,13 +4,13 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="yourtenant.onmicrosoft.com"
-  PolicyId="B2C_1A_signup_signin"
-  PublicPolicyUri="http://yourtenant.onmicrosoft.com/B2C_1A_signup_signin">
+  TenantId="iamsbxauthn.onmicrosoft.com"
+  PolicyId="B2C_1A_signup_signin1Broken"
+  PublicPolicyUri="http://iamsbxauthn.onmicrosoft.com/B2C_1A_signup_signin1">
 
   <BasePolicy>
-    <TenantId>yourtenant.onmicrosoft.com</TenantId>
-    <PolicyId>B2C_1A_TrustFrameworkExtensions</PolicyId>
+    <TenantId>iamsbxauthn.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_TrustFrameworkExtensionsNull</PolicyId>
   </BasePolicy>
 
   <RelyingParty>
