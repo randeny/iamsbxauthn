@@ -343,7 +343,7 @@
 
       <ContentDefinition Id="api.signuporsignin">
         <!--LoadUri>~/tenant/default/unified.cshtml</LoadUri-->
-        <LoadUri>https://{{STORAGE_ACCT_ID}}.blob.core.windows.net/{{CONTAINER_NAME}}/{{RELEASE_ID}}/resources/signup.html</LoadUri>
+        <LoadUri>https://{{STORAGE_ACCT_ID}}.blob.core.windows.net/{{CONTAINER_NAME}}/{{RELEASE_ID}}/resources/index.html</LoadUri>
         <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
         <DataUri>urn:com:microsoft:aad:b2c:elements:unifiedssp:1.0.0</DataUri>
         <Metadata>
