@@ -3,7 +3,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 0!important
 }
 
 body {
@@ -547,10 +548,6 @@ button {
         width: 190px;
         width: 11.875rem
     }
-}
-
-html {
-    min-width: 0!important
 }
 
 @media(min-width:1025px) {
