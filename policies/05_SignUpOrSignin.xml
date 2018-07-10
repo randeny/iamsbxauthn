@@ -24,7 +24,7 @@
         <OutputClaim ClaimTypeReferenceId="surname" />
         <OutputClaim ClaimTypeReferenceId="email" />
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub"/>
-
+        <OutputClaim ClaimTypeReferenceId="costco_B2Cidentity" DefaultValue="true"/>
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
     </TechnicalProfile>
