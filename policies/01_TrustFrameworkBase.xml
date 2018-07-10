@@ -79,6 +79,12 @@
         <UserHelpText>Enter password</UserHelpText>
         <UserInputType>Password</UserInputType>
       </ClaimType>
+      
+      <ClaimType Id="costco_B2Cidentity">
+	      <DisplayName>costco_B2Cidentity</DisplayName>
+	      <DataType>string</DataType>
+	      <UserHelpText>B2C identity type claim, used by the ASI Apparatus </UserHelpText>
+      </ClaimType>
 
       <!-- The claim types newPassword and reenterPassword are considered special, please do not change the names. 
            The UI validates the the user correctly re-entered their password during account creation based on these 
