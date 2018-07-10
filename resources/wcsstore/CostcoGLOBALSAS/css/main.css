@@ -15,18 +15,180 @@ header {
     display: block
 }
 
+/* ======= Sign-in Form Styling ====*/
+.form-signin {
+    max-width: 400px;
+    padding: 25px 30px 25px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5vh;
+}
+
+.intro, .divider, .signUp {
+    text-align: center
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-radius: 10;
+    background-color: #eee
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 0px;
+    border-radius: 10;
+    background-color: #eee
+}
+
+.form-signin a:link {
+    color: #337ab7
+}
+
+.form-signin a:focus,
+.form-signin a:hover {
+    color: #23527c;
+    text-decoration: underline;
+    outline: 0;
+    cursor: pointer !important
+}
+
+.form-signin a:visited {
+    color: #337ab7
+}
+
+.form-signin .entry-item {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: none !important
+}
+
+.form-signin label {
+    display: block;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.1
+}
+
+.form-signin input[type=text],
+.form-signin input[type=email],
+.form-signin input[type=password] {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 18px 18px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 100% !important;
+    line-height: 1.42857143;
+    color: #000;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.form-signin input[type=text] {
+    margin-bottom: -1px;
+    border-radius: 10;
+    background-color: #eee
+}
+
+.form-signin input[type=password] {
+    margin-bottom:10px;
+    border-radius: 10;
+    background-color: #eee
+}
+
+.form-signin .buttons {
+    margin-top: 0;
+    padding-top: 0
+}
+
+.form-signin .buttons button {
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1px;
+    vertical-align: middle;
+    background-image: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display: block;
+    font-family: "Helvetica", "Open Sans", Arial, sans-serif;
+    width: 100% !important;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    height: 68px !important;
+    color: #fff;
+    background-color: #007da4;
+    border: none;
+    text-transform: none
+}
+
+@media only screen and (max-width:759px) {
+    .form-signin .buttons button {
+        font-size: 18px !important
+    }
+}
+
+.form-signin .buttons button:hover,
+.form-signin .buttons button:focus,
+.form-signin .buttons button:active,
+.form-signin .buttons button:active:focus,
+.form-signin .buttons button:active:hover,
+.form-signin .buttons button.active:hover {
+    color: #fff;
+    text-decoration: none !important;
+    transition: opacity .5s ease;
+    opacity: .75;
+    background-color: #007da4 !important;
+    cursor: pointer
+}
+
+.form-signin .buttons button:active,
+.form-signin .buttons button.active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0 !important
+}
+
+.form-signin .create {
+    text-align: left;
+    margin-top: 10px
+}
+
+.form-signin #api {
+    padding-bottom: 0
+}
+
+.form-signin #next {
+    margin-top: 20px
+}
+
+/*==================================*/
+
 a {
-    background-color: transparent
+    background-color: transparent;
 }
 
 a:active,
 a:hover {
-    outline: 0
-}
-
-b,
-strong {
-    font-weight: 700
+    outline: 0;
 }
 
 h1 {
