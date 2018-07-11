@@ -16,55 +16,85 @@ header {
 }
 
 /* ======= Sign-in Form Styling ====*/
-.form-signin {
+.signin-Text {
+    max-width: 450px;
+    padding: 25px 30px 25px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 5vh;
+    padding: 0px
+}
+
+.intro h2 {
+    display: none
+}
+
+.intro:before {
+    content: 'Sign into access your Costco.com account';
+    visibility: visible !important;
+    display: block !important;
+    font-size: 18px;
+}
+
+.localAccount {
     max-width: 400px;
     padding: 25px 30px 25px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
-.intro, .divider, .signUp {
+.localAccount .h2, .localAccount p {
     text-align: center
 }
 
-.form-signin input[type="text"] {
+.divider, .signUp {
+    align-content: center;
+    text-align: center
+}
+
+.divider {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.entry-item input[type="email"] {
     margin-bottom: -1px;
     border-radius: 10;
     background-color: #eee
 }
 
-.form-signin input[type="password"] {
+.entry-item input[type="password"] {
     margin-bottom: 0px;
     border-radius: 10;
     background-color: #eee
 }
 
-.form-signin a:link {
+#api a:link {
     color: #337ab7
 }
 
-.form-signin a:focus,
-.form-signin a:hover {
-    color: #23527c;
+#api a:focus,
+#api a:hover {
+    color: #0060a9;
     text-decoration: underline;
     outline: 0;
     cursor: pointer !important
 }
 
-.form-signin a:visited {
-    color: #337ab7
+#api a:visited {
+    color: #0060a9
 }
 
-.form-signin .entry-item {
+#api .entry-item {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     background: none !important
 }
 
-.form-signin label {
+#api label {
     display: block;
     text-transform: uppercase;
     margin-top: 20px;
@@ -75,9 +105,9 @@ header {
     line-height: 1.1
 }
 
-.form-signin input[type=text],
-.form-signin input[type=email],
-.form-signin input[type=password] {
+#api input[type=text],
+#api input[type=email],
+#api input[type=password] {
     position: relative;
     font-size: 16px;
     height: auto;
@@ -92,27 +122,26 @@ header {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
 }
 
-.form-signin input[type=text] {
+#api input[type=email] {
     margin-bottom: -1px;
     border-radius: 10;
     background-color: #eee
 }
 
-.form-signin input[type=password] {
+#api input[type=password] {
     margin-bottom:10px;
     border-radius: 10;
     background-color: #eee
 }
 
-.form-signin .buttons {
-    margin-top: 0;
+#api .buttons {
+    margin-top: 20px;
     padding-top: 0
 }
 
-.form-signin .buttons button {
+#api .buttons button {
     margin-bottom: 0;
     font-weight: bold;
     text-align: center;
@@ -130,46 +159,41 @@ header {
     display: block;
     font-family: "Helvetica", "Open Sans", Arial, sans-serif;
     width: 100% !important;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 15px;
     font-size: 20px;
     height: 68px !important;
     color: #fff;
-    background-color: #007da4;
+    background-color: #3071a9;
     border: none;
     text-transform: none
 }
 
 @media only screen and (max-width:759px) {
-    .form-signin .buttons button {
+    #api .buttons button {
         font-size: 18px !important
     }
 }
 
-.form-signin .buttons button:hover,
-.form-signin .buttons button:focus,
-.form-signin .buttons button:active,
-.form-signin .buttons button:active:focus,
-.form-signin .buttons button:active:hover,
-.form-signin .buttons button.active:hover {
+#api .buttons button:hover,
+#api .buttons button:focus,
+#api .buttons button:active,
+#api .buttons button:active:focus,
+#api .buttons button:active:hover,
+#api .buttons button.active:hover {
     color: #fff;
     text-decoration: none !important;
     transition: opacity .5s ease;
     opacity: .75;
-    background-color: #007da4 !important;
+    background-color: #3071a9!important;
     cursor: pointer
 }
 
-.form-signin .buttons button:active,
-.form-signin .buttons button.active {
+#api .buttons button:active,
+#api .buttons button.active {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: 0 !important
-}
-
-.form-signin .create {
-    text-align: left;
-    margin-top: 10px
 }
 
 .form-signin #api {
@@ -181,20 +205,6 @@ header {
 }
 
 /*==================================*/
-
-a {
-    background-color: transparent;
-}
-
-a:active,
-a:hover {
-    outline: 0;
-}
-
-h1 {
-    font-size: 2em;
-    margin: .67em 0
-}
 
 small {
     font-size: 80%
@@ -216,24 +226,6 @@ sub {
     bottom: -.25em
 }
 
-img {
-    border: 0
-}
-
-figure {
-    margin: 1em 40px
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-    color: inherit;
-    font: inherit;
-    margin: 0
-}
-
 button {
     overflow: visible
 }
@@ -248,15 +240,6 @@ body {
     font-size: 14px;
     line-height: 1.42857;
     background-color: #fff
-}
-
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit
 }
 
 a {
@@ -280,35 +263,6 @@ img {
     vertical-align: middle
 }
 
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto
-}
-
-.img-rounded {
-    border-radius: 0
-}
-
-.img-thumbnail {
-    padding: 4px;
-    line-height: 1.42857;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 0;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    display: inline-block;
-    max-width: 100%;
-    height: auto
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
@@ -321,63 +275,13 @@ h6 {
     color: inherit
 }
 
-.h1 .small,
-.h1 small,
-.h2 .small,
-.h2 small,
-.h3 .small,
-.h3 small,
-.h4 .small,
-.h4 small,
-.h5 .small,
-.h5 small,
-.h6 .small,
-.h6 small,
-h1 .small,
-h1 small,
-h2 .small,
-h2 small,
-h3 .small,
-h3 small,
-h4 .small,
-h4 small,
-h5 .small,
-h5 small,
-h6 .small,
-h6 small {
-    font-weight: 400;
-    line-height: 1;
-    color: #777
-}
-
-.h1,
-.h2,
-.h3,
 h1,
 h2,
 h3 {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px
 }
 
-.h1 .small,
-.h1 small,
-.h2 .small,
-.h2 small,
-.h3 .small,
-.h3 small,
-h1 .small,
-h1 small,
-h2 .small,
-h2 small,
-h3 .small,
-h3 small {
-    font-size: 65%
-}
-
-.h4,
-.h5,
-.h6,
 h4,
 h5,
 h6 {
@@ -385,22 +289,7 @@ h6 {
     margin-bottom: 10px
 }
 
-.h4 .small,
-.h4 small,
-.h5 .small,
-.h5 small,
-.h6 .small,
-.h6 small,
-h4 .small,
-h4 small,
-h5 .small,
-h5 small,
-h6 .small,
-h6 small {
-    font-size: 75%
-}
 
-.h1,
 h1 {
     font-size: 36px
 }
@@ -452,13 +341,6 @@ ul ul {
     margin-bottom: 0
 }
 
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px
-}
-
 @media(min-width:376px) {
     .container {
         width: 750px
@@ -490,32 +372,13 @@ ul ul {
     padding-right: 15px
 }
 
-.container-fluid:after,
-.container-fluid:before {
+.container-fluid:after {
     content: " ";
     display: table
 }
 
 .container-fluid:after {
     clear: both
-}
-
-.container-fluid>.navbar-collapse,
-.container-fluid>.navbar-header,
-.container>.navbar-collapse,
-.container>.navbar-header {
-    margin-right: -15px;
-    margin-left: -15px
-}
-
-@media(min-width:376px) {
-    .container-fluid>.navbar-collapse,
-    .container-fluid>.navbar-header,
-    .container>.navbar-collapse,
-    .container>.navbar-header {
-        margin-right: 0;
-        margin-left: 0
-    }
 }
 
 @media(max-width:375px) {
@@ -549,8 +412,6 @@ ul ul {
 }
 
 body {
-    font-family: Helvetica Neue, Helvetica, Arial, Roboto, sans-serif;
-    font-weight: 400;
     font-size: 16px;
     font-size: 1rem;
     color: #333;
