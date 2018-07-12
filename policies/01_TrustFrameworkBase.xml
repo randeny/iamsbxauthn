@@ -692,7 +692,7 @@
             <OutputClaim ClaimTypeReferenceId="authenticationSource" />
           </OutputClaims>
           <ValidationTechnicalProfiles>
-            <ValidationTechnicalProfile ReferenceId="ValidateUser" />
+          <!--  <ValidationTechnicalProfile ReferenceId="ValidateUser" /> -->
             <ValidationTechnicalProfile ReferenceId="login-NonInteractive" />
           </ValidationTechnicalProfiles>
           <UseTechnicalProfileForSessionManagement ReferenceId="SM-AAD" />
