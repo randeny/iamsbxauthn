@@ -12,3 +12,5 @@ The folder structure:
 -- package.json (platform and application configuration/dependencies)
 -- package-lock.json (platform and application dependencies)
 ```
+
+This is our meager test.
